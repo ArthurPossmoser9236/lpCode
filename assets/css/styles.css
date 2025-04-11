@@ -1,0 +1,21 @@
+:root {
+    --font-inter: "Inter", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sideCode{
+    width: 100%;
+    height: 100%;
+}
+
+.sideQuestions {
+    width: 100%;
+    height: 100%;
+}
