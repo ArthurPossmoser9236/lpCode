@@ -10,12 +10,103 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 
-.sideCode{
-    width: 100%;
-    height: 100%;
-}
-
+/* Sides */
+.sideCode,
 .sideQuestions {
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sideCode-top,
+.sideCode-bottom,
+.sideQuestions-top,
+.sideQuestions-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideCode-top,
+.sideQuestions-top {
+    width: 100%;
+    height: 50%;
+}
+
+.sideCode-bottom,
+.sideQuestions-bottom {
+    width: 100%;
+    height: 50%;
+    background-color: bisque;
+}
+
+/* SideCode */
+
+.giftBox {
+    width: auto;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.giftBox img {
+    height:80%;
+    width: auto;
+    border-radius: 50px;
+}
+
+.stopWatch {
+    width: auto;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.stopWatch p {
+    font-family: var(--font-inter);
+    color: #020b58;
+    font-size: 2.5rem;
+}
+
+.sideCode-bottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.code {
+    width: auto;
+    height: auto;
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-item:not(:last-child) {
+    margin-right: 80px;
+}
+
+.list-item h3 {
+    font-size: 100px;
+}
+
+.list-item span {
+    width: 100%;
+    border: 2px solid #020b58;
 }

@@ -2,107 +2,140 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <title>lpCode</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <title>lpCode</title>
 </head>
 
 <body>
 
-    <section class="sideCode">
-        <div class="sideCode-top">
-            <div class="giftBox"></div>
-            <div class="stopWatch"></div>
-        </div>
-        <div class="sideCode-bottom">
-            <div class="code"></div>
-            <div class="open-btn">
-                <button>Abrir</button>
+  <section class="sideCode">
+    <div class="sideCode-top">
+      <div class="giftBox">
+        <img src="assets/imgs/tesouro.avif" class="imgGift">
+      </div>
+      <div class="stopWatch">
+        <p>00:38:25</p>
+      </div>
+    </div>
+    <div class="sideCode-bottom">
+      <div class="code">
+        <ul class="list">
+          <li class="list-item">
+            <h3>0</h3>
+            <span></span>
+          </li>
+          <li class="list-item">
+            <h3>1</h3>
+            <span></span>
+          </li>
+          <li class="list-item">
+            <h3>1</h3>
+            <span></span>
+          </li>
+          <li class="list-item">
+            <h3>1</h3>
+            <span></span>
+          </li>
+          <li class="list-item">
+            <h3>0</h3>
+            <span></span>
+          </li>
+          <li class="list-item">
+            <h3>0</h3>
+            <span></span>
+          </li>
+        </ul>
+      </div>
+      <div class="open-btn">
+        <button>Abrir</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sideQuestions">
+    <div class="sideQuestions-top">
+      <div class="questions">
+        <p>Pergunta</p>
+      </div>
+    </div>
+    <div class="sideQuestions-bottom">
+      <div class="formGlobal">
+        <form #answerForm="ngForm" (ngSubmit)="onSubmit(answerForm)">
+          <div class="form-group">
+            <label>Selecione a resposta correta:</label>
+
+            <!-- Resposta 1 -->
+            <div class="form-check">
+              <input type="radio" id="resposta1" name="resposta" value="opcao1" ngModel class="form-check-input">
+              <label for="resposta1" class="form-check-label">
+                Opção 1
+                <br>
+                <small class="text-muted">Descrição breve da opção 1.</small>
+              </label>
             </div>
-        </div>
-    </section>
-    <section class="sideQuestions">
-        <div class="sideQuestions-top">
-            <div class="questions">
-                <p>Pergunta</p>
+
+            <!-- Resposta 2 -->
+            <div class="form-check">
+              <input type="radio" id="resposta2" name="resposta" value="opcao2" ngModel class="form-check-input">
+              <label for="resposta2" class="form-check-label">
+                Opção 2
+                <br>
+                <small class="text-muted">Descrição breve da opção 2.</small>
+              </label>
             </div>
-            <div class="sideQuestions-bottom">
-                <div class="formGlobal">
-                    <form #answerForm="ngForm" (ngSubmit)="onSubmit(answerForm)">
-                        <div class="form-group">
-                          <label>Selecione a resposta correta:</label>
-                      
-                          <!-- Resposta 1 -->
-                          <div class="form-check">
-                            <input type="radio" id="resposta1" name="resposta" value="opcao1" ngModel class="form-check-input">
-                            <label for="resposta1" class="form-check-label">
-                              Opção 1
-                              <br>
-                              <small class="text-muted">Descrição breve da opção 1.</small>
-                            </label>
-                          </div>
-                      
-                          <!-- Resposta 2 -->
-                          <div class="form-check">
-                            <input type="radio" id="resposta2" name="resposta" value="opcao2" ngModel class="form-check-input">
-                            <label for="resposta2" class="form-check-label">
-                              Opção 2
-                              <br>
-                              <small class="text-muted">Descrição breve da opção 2.</small>
-                            </label>
-                          </div>
-                      
-                          <!-- Resposta 3 -->
-                          <div class="form-check">
-                            <input type="radio" id="resposta3" name="resposta" value="opcao3" ngModel class="form-check-input">
-                            <label for="resposta3" class="form-check-label">
-                              Opção 3
-                              <br>
-                              <small class="text-muted">Descrição breve da opção 3.</small>
-                            </label>
-                          </div>
-                      
-                          <!-- Resposta 4 -->
-                          <div class="form-check">
-                            <input type="radio" id="resposta4" name="resposta" value="opcao4" ngModel class="form-check-input">
-                            <label for="resposta4" class="form-check-label">
-                              Opção 4
-                              <br>
-                              <small class="text-muted">Descrição breve da opção 4.</small>
-                            </label>
-                          </div>
-                      
-                          <!-- Resposta 5 -->
-                          <div class="form-check">
-                            <input type="radio" id="resposta5" name="resposta" value="opcao5" ngModel class="form-check-input">
-                            <label for="resposta5" class="form-check-label">
-                              Opção 5
-                              <br>
-                              <small class="text-muted">Descrição breve da opção 5.</small>
-                            </label>
-                          </div>
-                        </div>
-                      
-                        <button type="submit" class="btn btn-primary">Responder</button>
-                      </form>
-                      
-                </div>
-                <div class="btns">
-                    <button class="btn-next">Avançar</button>
-                    <button class="finish">Terminar</button>
-                </div>
+
+            <!-- Resposta 3 -->
+            <div class="form-check">
+              <input type="radio" id="resposta3" name="resposta" value="opcao3" ngModel class="form-check-input">
+              <label for="resposta3" class="form-check-label">
+                Opção 3
+                <br>
+                <small class="text-muted">Descrição breve da opção 3.</small>
+              </label>
             </div>
-        </div>
-    </section>
+
+            <!-- Resposta 4 -->
+            <div class="form-check">
+              <input type="radio" id="resposta4" name="resposta" value="opcao4" ngModel class="form-check-input">
+              <label for="resposta4" class="form-check-label">
+                Opção 4
+                <br>
+                <small class="text-muted">Descrição breve da opção 4.</small>
+              </label>
+            </div>
+
+            <!-- Resposta 5 -->
+            <div class="form-check">
+              <input type="radio" id="resposta5" name="resposta" value="opcao5" ngModel class="form-check-input">
+              <label for="resposta5" class="form-check-label">
+                Opção 5
+                <br>
+                <small class="text-muted">Descrição breve da opção 5.</small>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Responder</button>
+        </form>
+
+      </div>
+      <div class="btns">
+        <button class="btn-next">Avançar</button>
+        <button class="finish">Terminar</button>
+      </div>
+    </div>
+
+  </section>
 
 </body>
 
