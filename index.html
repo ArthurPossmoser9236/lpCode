@@ -18,6 +18,8 @@
 
 <body>
 
+  <canvas id="matrixCanvas"></canvas>
+
   <section class="sideCode">
     <div class="sideCode-top">
       <div class="giftBox">
@@ -35,29 +37,31 @@
             <span></span>
           </li>
           <li class="list-item">
-            <h3>1</h3>
+            <h3>8</h3>
+            <span></span>
+          </li>
+          <li class="list-item">
+            <h3>3</h3>
+            <span></span>
+          </li>
+          <li class="list-item">
+            <h3>6</h3>
+            <span></span>
+          </li>
+          <li class="list-item">
+            <h3>2</h3>
             <span></span>
           </li>
           <li class="list-item">
             <h3>1</h3>
-            <span></span>
-          </li>
-          <li class="list-item">
-            <h3>1</h3>
-            <span></span>
-          </li>
-          <li class="list-item">
-            <h3>0</h3>
-            <span></span>
-          </li>
-          <li class="list-item">
-            <h3>0</h3>
             <span></span>
           </li>
         </ul>
       </div>
-      <div class="open-btn">
-        <button>Abrir</button>
+      <div class="divOpen-btn">
+        <button class="open-btn">
+          <span class="button_top"> ABRIR </span>
+        </button>
       </div>
     </div>
   </section>
@@ -65,12 +69,16 @@
   <section class="sideQuestions">
     <div class="sideQuestions-top">
       <div class="questions">
-        <p>Pergunta</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet erat a vestibulum varius. Duis
+          faucibus, mi a euismod bibendum, sem nunc volutpat lectus, vitae commodo ex diam sed diam. Praesent vel lorem
+          in arcu tempor rhoncus. Sed ac est id eros lobortis feugiat. Praesent sed nisl mattis orci sodales luctus.
+          Nullam ornare, odio quis vestibulum consectetur. Suspendisse nulla libero, Duis sollicitudin molestie est
+          vitae volutpat?</p>
       </div>
     </div>
     <div class="sideQuestions-bottom">
       <div class="formGlobal">
-        <form #answerForm="ngForm" (ngSubmit)="onSubmit(answerForm)">
+        <form class="form" #answerForm="ngForm" (ngSubmit)="onSubmit(answerForm)">
           <div class="form-group">
             <label>Selecione a resposta correta:</label>
 
@@ -78,9 +86,10 @@
             <div class="form-check">
               <input type="radio" id="resposta1" name="resposta" value="opcao1" ngModel class="form-check-input">
               <label for="resposta1" class="form-check-label">
-                Opção 1
-                <br>
-                <small class="text-muted">Descrição breve da opção 1.</small>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet justo quam, in ullamcorper
+                lorem elementum at. Sed fringilla porta ante.
+
               </label>
             </div>
 
@@ -88,9 +97,10 @@
             <div class="form-check">
               <input type="radio" id="resposta2" name="resposta" value="opcao2" ngModel class="form-check-input">
               <label for="resposta2" class="form-check-label">
-                Opção 2
-                <br>
-                <small class="text-muted">Descrição breve da opção 2.</small>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet justo quam, in ullamcorper
+                lorem elementum at. Sed fringilla porta ante.
+
               </label>
             </div>
 
@@ -98,9 +108,10 @@
             <div class="form-check">
               <input type="radio" id="resposta3" name="resposta" value="opcao3" ngModel class="form-check-input">
               <label for="resposta3" class="form-check-label">
-                Opção 3
-                <br>
-                <small class="text-muted">Descrição breve da opção 3.</small>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet justo quam, in ullamcorper
+                lorem elementum at. Sed fringilla porta ante.
+
               </label>
             </div>
 
@@ -108,9 +119,10 @@
             <div class="form-check">
               <input type="radio" id="resposta4" name="resposta" value="opcao4" ngModel class="form-check-input">
               <label for="resposta4" class="form-check-label">
-                Opção 4
-                <br>
-                <small class="text-muted">Descrição breve da opção 4.</small>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet justo quam, in ullamcorper
+                lorem elementum at. Sed fringilla porta ante.
+
               </label>
             </div>
 
@@ -118,25 +130,27 @@
             <div class="form-check">
               <input type="radio" id="resposta5" name="resposta" value="opcao5" ngModel class="form-check-input">
               <label for="resposta5" class="form-check-label">
-                Opção 5
-                <br>
-                <small class="text-muted">Descrição breve da opção 5.</small>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet justo quam, in ullamcorper
+                lorem elementum at. Sed fringilla porta ante.
+
               </label>
             </div>
           </div>
-
-          <button type="submit" class="btn btn-primary">Responder</button>
+          <div class="btns">
+            <button class="btn-apply">Aplicar</button>
+            <button class="btn-next">Avançar</button>
+            <button class="btn-finish">Terminar</button>
+          </div>
+          
         </form>
 
       </div>
-      <div class="btns">
-        <button class="btn-next">Avançar</button>
-        <button class="finish">Terminar</button>
-      </div>
-    </div>
 
   </section>
 
 </body>
+
+<script src="assets/js/script.js"></script>
 
 </html>

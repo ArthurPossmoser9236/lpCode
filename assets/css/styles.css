@@ -10,6 +10,15 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 
+#matrixCanvas {
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
 /* Sides */
 .sideCode,
 .sideQuestions {
@@ -27,23 +36,30 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
-.sideCode-top,
+.sideCode-top {
+    width: 100%;
+    height: 50%;
+}
+
 .sideQuestions-top {
     width: 100%;
-    height: 50%;
+    height: 30%;
 }
 
-.sideCode-bottom,
-.sideQuestions-bottom {
+.sideCode-bottom {
     width: 100%;
     height: 50%;
-    background-color: bisque;
 }
 
-/* SideCode */
+.sideQuestions-bottom {
+    width: 100%;
+    height: 70%;
+}
+
+/* =-=-=-=-=- SideCode -=-=-=-= */
 
 .giftBox {
     width: auto;
@@ -53,7 +69,7 @@ body {
 }
 
 .giftBox img {
-    height:80%;
+    height: 80%;
     width: auto;
     border-radius: 50px;
 }
@@ -67,8 +83,8 @@ body {
 
 .stopWatch p {
     font-family: var(--font-inter);
-    color: #020b58;
-    font-size: 2.5rem;
+    color: #ffffff;
+    font-size: 3rem;
 }
 
 .sideCode-bottom {
@@ -77,7 +93,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .code {
@@ -102,11 +118,157 @@ body {
     margin-right: 80px;
 }
 
-.list-item h3 {
+.list-item>h3 {
     font-size: 100px;
+    font-family: var(--font-inter);
+    color: #ffffff;
 }
 
 .list-item span {
     width: 100%;
-    border: 2px solid #020b58;
+    border: 2px solid #d1d1d1;
+}
+
+/* styles btn open */
+.open-btn {
+    --button_radius: 0.75em;
+    --button_color: #ffffff;
+    --button_outline_color: #0b3b01;
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 3px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+    font-family: var(--font-inter);
+}
+
+.open-btn:hover .button_top {
+    transform: translateY(-0.33em);
+}
+
+.open-btn:active .button_top {
+    transform: translateY(0);
+}
+
+/* =-=-=-=-=- SideQuestion -=-=-=-= */
+.sideQuestions-top {
+    padding: 50px 30px;
+}
+
+.questions {
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    background-color: hsla(0, 0%, 100%, 0.8);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+.questions p {
+    font-size: 1.2rem;
+    color: #000000;
+    font-family: var(--font-inter);
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.formGlobal {
+    height: 75%;
+    width: 80%;
+    padding: 30px;
+    background-color: hsla(0, 0%, 100%, 0.8);
+    border-radius: 10px;
+    font-family: var(--font-inter);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group>label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #000000;
+    font-family: var(--font-inter);
+    line-height: 30px;
+}
+
+.form-check {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.form-check-input {
+    margin-right: 10px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.form-check-label {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.form-check-label small.text-muted {
+    font-size: 1rem;
+    color: #000000;
+}
+ 
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn-apply, .btn-next, .btn-finish {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-apply:hover , .btn-next:hover , .btn-finish:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-apply:focus , .btn-next:focus , .btn-finish:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
 }
