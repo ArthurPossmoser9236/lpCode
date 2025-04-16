@@ -13,141 +13,54 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;600;700&display=swap" rel="stylesheet">
   <title>lpCode</title>
 </head>
 
 <body>
+  <div class="divGlobal">
 
-  <canvas id="matrixCanvas"></canvas>
-
-  <section class="sideCode">
-    <div class="sideCode-top">
-      <div class="giftBox">
-        <img src="assets/imgs/tesouro.avif" class="imgGift">
+    <section class="sideCode">
+      <div class="logo">
+        <img src="assets/imgs/logo.svg" alt="Logo">
+      </div>
+      <div class="trunk">
+        <img src="assets/imgs/cofreA.png" alt="Baú">
       </div>
       <div class="stopWatch">
-        <p>00:38:25</p>
+        <p>10:53:17</p>
       </div>
-    </div>
-    <div class="sideCode-bottom">
       <div class="code">
-        <ul class="list">
-          <li class="list-item">
-            <h3>0</h3>
+        <ul>
+          <li>
+            <p>5</p>
             <span></span>
           </li>
-          <li class="list-item">
-            <h3>8</h3>
+          <li>
+            <p>4</p>
             <span></span>
           </li>
-          <li class="list-item">
-            <h3>3</h3>
+          <li>
+            <p>3</p>
             <span></span>
           </li>
-          <li class="list-item">
-            <h3>6</h3>
+          <li>
+            <p>7</p>
             <span></span>
           </li>
-          <li class="list-item">
-            <h3>2</h3>
-            <span></span>
-          </li>
-          <li class="list-item">
-            <h3>1</h3>
+          <li>
+            <p>9</p>
             <span></span>
           </li>
         </ul>
       </div>
-      <div class="divOpen-btn">
-        <button class="open-btn">
-          <span class="button_top"> ABRIR </span>
-        </button>
+      <div class="btnOpen">
+        <button>ABRIR</button>
       </div>
-    </div>
-  </section>
-
-  <section class="sideQuestions">
-    <div class="sideQuestions-top">
-      <div class="questions">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet erat a vestibulum varius. Duis
-          faucibus, mi a euismod bibendum, sem nunc volutpat lectus, vitae commodo ex diam sed diam. Praesent vel lorem
-          in arcu tempor rhoncus. Sed ac est id eros lobortis feugiat. Praesent sed nisl mattis orci sodales luctus.
-          Nullam ornare, odio quis vestibulum consectetur. Suspendisse nulla libero, Duis sollicitudin molestie est
-          vitae volutpat?</p>
-      </div>
-    </div>
-    <div class="sideQuestions-bottom">
-      <div class="formGlobal">
-        <form class="form" #answerForm="ngForm" (ngSubmit)="onSubmit(answerForm)">
-          <div class="form-group">
-            <label>Selecione a resposta correta:</label>
-
-            <!-- Resposta 1 -->
-            <div class="form-check">
-              <input type="radio" id="resposta1" name="resposta" value="opcao1" ngModel class="form-check-input">
-              <label for="resposta1" class="form-check-label">
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet justo quam, in ullamcorper
-                lorem elementum at. Sed fringilla porta ante.
-
-              </label>
-            </div>
-
-            <!-- Resposta 2 -->
-            <div class="form-check">
-              <input type="radio" id="resposta2" name="resposta" value="opcao2" ngModel class="form-check-input">
-              <label for="resposta2" class="form-check-label">
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet justo quam, in ullamcorper
-                lorem elementum at. Sed fringilla porta ante.
-
-              </label>
-            </div>
-
-            <!-- Resposta 3 -->
-            <div class="form-check">
-              <input type="radio" id="resposta3" name="resposta" value="opcao3" ngModel class="form-check-input">
-              <label for="resposta3" class="form-check-label">
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet justo quam, in ullamcorper
-                lorem elementum at. Sed fringilla porta ante.
-
-              </label>
-            </div>
-
-            <!-- Resposta 4 -->
-            <div class="form-check">
-              <input type="radio" id="resposta4" name="resposta" value="opcao4" ngModel class="form-check-input">
-              <label for="resposta4" class="form-check-label">
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet justo quam, in ullamcorper
-                lorem elementum at. Sed fringilla porta ante.
-
-              </label>
-            </div>
-
-            <!-- Resposta 5 -->
-            <div class="form-check">
-              <input type="radio" id="resposta5" name="resposta" value="opcao5" ngModel class="form-check-input">
-              <label for="resposta5" class="form-check-label">
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet justo quam, in ullamcorper
-                lorem elementum at. Sed fringilla porta ante.
-
-              </label>
-            </div>
-          </div>
-          <div class="btns">
-            <button class="btn-apply">Aplicar</button>
-            <button class="btn-next">Avançar</button>
-            <button class="btn-finish">Terminar</button>
-          </div>
-          
-        </form>
-
-      </div>
-
-  </section>
+    </section>
+  </div>
 
 </body>
 
